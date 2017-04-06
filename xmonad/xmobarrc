@@ -1,0 +1,37 @@
+-- vim: ft=haskell
+Config { font = "xft:Migu 1M:size=10"
+       , bgColor = "#1c1c1c"
+       , fgColor = "#404040"
+       , position = TopSize L 100 10
+       -- , position = Static { xpos = 37 , ypos = 0, width = 1845, height = 18 }
+       , lowerOnStart = False
+       , overrideRedirect = False
+       , border = BottomBM 0
+       , borderColor = "#4e4e4e"
+       , commands = [ Run Network "wlp2s0" [ "-t"       , "⇩<rx>  ⇧<tx>  "
+                                          , "-L"       , "40"
+                                          , "-H"       , "200"
+                                          , "-m"       , "3"
+                                          , "--normal" , "#b0bdbd"
+                                          , "--high"   , "#a5d6a7"
+                                          ] 10
+                    , Run BatteryP        ["BAT1"]
+                                          [ "-t"       , "⌇ <acstatus>  "
+                                          , "-L"       , "20"
+                                          , "-H"       , "80"
+                                          , "--low"    , "#ef9a9a"
+                                          , "--normal" , "#b0bdbd"
+                                          , "--"
+                                                , "-o" , "<left>% (<timeleft>)"
+                                                , "-O" , "Charging <left>%"
+                                                , "-i" , "<left>%"
+                                          ] 50
+                    , Run Com "$HOME/.bin/Wireless.sh" [] "wifi" 10
+		    , Run Com "$HOME/./bin/Volumen.sh" [] "vol" 10
+	   	    , Run Date "%a %m/%d %H:%M" "date" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %StdinReader% }{ %wlp2s0%%vol% %wifi%%battery%<fc=#ece391>%date%</fc> "
+}
