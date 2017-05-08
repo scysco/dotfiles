@@ -88,7 +88,7 @@ main = do
     xmproc <- spawnPipe "sh ~/.fehbg"
     xmproc <- spawnPipe "urxvtd -o -q -f"
     wsbar <- spawnPipe myWsBar
-    xmproc <- spawnPipe "sleep 3 && stalonetray &"
+    xmproc <- spawnPipe "sleep 3 && ~/.bin/trayer.sh"
     xmonad $ withNavigation2DConfig myNavigation2DConfig
 	   $ withUrgencyHookC NoUrgencyHook urgencyConfig{ suppressWhen = Focused }	
 	   $ ewmh 
@@ -151,38 +151,28 @@ main = do
        ------------------------------------------------------------------------
 
        `additionalKeysP`
-       [("M-<Return>", spawn "urxvtc")
-       -- Launch terminal with a float window
-       , ("M-S-<Return>", spawn "urxvt_float.sh")
-       -- Insert a transparent panel
-       , ("M-S-t", spawn "python $HOME/Workspace/python/transparent.py")
+       [("M-<Return>", spawn "termite")
        -- Launch file manager
-       , ("M-e", spawn "thunar")
+       , ("M-e", spawn "termite -e ranger")
        -- Launch web browser
        , ("M-w", spawn "luakit")
        -- Launch dmenu for launching applicatiton
        , ("M-p", spawn "exe=`dmenu_run -fn 'Migu 1M:size=10'` && exec $exe")
-       -- Lauch websearch application (See https://github.com/ssh0/web_search)
-       , ("M1-C-f", spawn "websearch")
        -- Play / Pause media keys
-       -- , ("<XF86AudioPlay>"  , spawn "mpc toggle")
-       -- , ("<XF86HomePage>"   , spawn "mpc toggle")
-       -- , ("S-<F6>"           , spawn "mpc toggle")
-       -- , ("S-<XF86AudioPlay>", spawn "streamradio pause")
-       -- , ("S-<XF86HomePage>" , spawn "streamradio pause")
+       , ("M-<F7>", spawn "playerctl play-pause")
+       , ("M-<F8>", spawn "playerctl next")
+       , ("M-<F6>", spawn "playerctl prev")
        -- Volume setting media keys
        , ("<XF86AudioRaiseVolume>",   spawn "~/.bin/AudioVolume.sh +")
        , ("<XF86AudioLowerVolume>",   spawn "~/.bin/AudioVolume.sh -")
        , ("<XF86AudioMute>",          spawn "~/.bin/AudioVolume.sh m")
         -- Brightness Keys
-       , ("<XF86MonBrightnessUp>"  , spawn "xbacklight + 5%")
-       , ("<XF86MonBrightnessDown>", spawn "xbacklight - 5%")
+       , ("<XF86MonBrightnessUp>"  , spawn "~/.bin/BrightnessChange.sh +")
+       , ("<XF86MonBrightnessDown>", spawn "~/.bin/BrightnessChange.sh -")
        -- Take a screenshot (whole window)
        , ("<Print>", spawn "~/.bin/screenshot.sh")
        -- Take a screenshot (selected area)
        , ("S-<Print>", spawn "~/.bin/screenshot_select.sh")
-       -- Launch ipython qtconsole
-       , ("<XF86Calculator>", spawn "ipython qtconsole --matplotlib=inline")
        -- Toggle touchpad
        , ("M-<F5>", spawn "~/.bin/touchpad_toggle.sh")
        ]

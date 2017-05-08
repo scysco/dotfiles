@@ -1,5 +1,3 @@
-#!/bin/sh
-
-echo Sound: $(pamixer --get-volum)% 
-
+#!/bin/bash
+echo \(\(•\)\) $(pamixer --get-volum)%
 exit 0

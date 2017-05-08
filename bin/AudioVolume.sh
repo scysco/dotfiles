@@ -8,5 +8,5 @@ case "$1" in
     amixer -D pulse set Master toggle ;;
 esac
 
-pamixer --get-volum | dzen2 -p 1 -w 150 -x 1211 -y 25
+echo \(\(•\)\) $(pamixer --get-volum)% | dzen2 -p 1 -w 150 -h 30 -x 1211 -y 25
 
