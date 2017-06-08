@@ -63,6 +63,8 @@ Plug 'shougo/neocomplete.vim'
 "Plug 'dracula/vim'
 Plug 'flazz/vim-colorschemes'
 
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 "----------------------------------------------------------------"

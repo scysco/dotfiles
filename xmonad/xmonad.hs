@@ -212,7 +212,7 @@ myManageHook = composeAll
     , className =? "NeercGame"          --> doFloat
     , isDialog                          --> doCenterFloat
     , resource  =? "desktop_window"     --> doIgnore
-    , className =? "steam"              --> doShift (myWorkspaces !! 6)
+    , className =? "firefox"              --> doShift "1"
     , isFullscreen                      --> doFullFloat
     ]	
 
