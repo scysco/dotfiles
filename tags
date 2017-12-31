@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<C-p>	init.vim	/^    nnoremap <silent> <C-p> :Denite file_rec<CR>$/;"	m
+g:clang2_placeholder_next	init.vim	/^let g:clang2_placeholder_next = ''$/;"	v
+g:clang2_placeholder_prev	init.vim	/^let g:clang2_placeholder_prev = ''$/;"	v
+g:ctrlp_map	init.vim	/^    let g:ctrlp_map = ''$/;"	v
+g:deoplete#auto_complete_delay	init.vim	/^let g:deoplete#auto_complete_delay = 150$/;"	v
+g:gitgutter_enabled	init.vim	/^let g:gitgutter_enabled = 1$/;"	v
+g:neomake_vim_enabled_makers	init.vim	/^let g:neomake_vim_enabled_makers = []$/;"	v
+g:spacevim_buffer_index_type	init.vim	/^let g:spacevim_buffer_index_type = 1$/;"	v
+g:spacevim_enable_debug	init.vim	/^let g:spacevim_enable_debug = 1$/;"	v
+g:spacevim_enable_googlesuggest	init.vim	/^let g:spacevim_enable_googlesuggest = 1$/;"	v
+g:spacevim_enable_os_fileformat_icon	init.vim	/^let g:spacevim_enable_os_fileformat_icon = 1$/;"	v
+g:spacevim_enable_statusline_display_mode	init.vim	/^let g:spacevim_enable_statusline_display_mode = 0$/;"	v
+g:spacevim_enable_tabline_filetype_icon	init.vim	/^let g:spacevim_enable_tabline_filetype_icon = 1$/;"	v
+g:spacevim_enable_vimfiler_welcome	init.vim	/^let g:spacevim_enable_vimfiler_welcome = 1$/;"	v
+g:spacevim_lint_on_the_fly	init.vim	/^let g:spacevim_lint_on_the_fly = 1$/;"	v
+g:spacevim_realtime_leader_guide	init.vim	/^let g:spacevim_realtime_leader_guide = 1$/;"	v
+parse_date	bin/alarm.sh	/^parse_date() {$/;"	f
+scysco-packages	packages.el	/^(defconst scysco-packages$/;"	f
+scysco/init-color-theme-sanityinc-tomorrow	packages.el	/^(defun scysco\/init-color-theme-sanityinc-tomorrow()$/;"	f
+scysco/init-crosshairs	packages.el	/^(defun scysco\/init-crosshairs()$/;"	f
+scysco/init-hlinum	packages.el	/^(defun scysco\/init-hlinum()$/;"	f
+scysco/post-init-linum	packages.el	/^(defun scysco\/post-init-linum()$/;"	f
+scysco/post-init-linum-relative	packages.el	/^(defun scysco\/post-init-linum-relative()$/;"	f
+usage	bin/alarm.sh	/^usage() {$/;"	f
