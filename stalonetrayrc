@@ -2,13 +2,11 @@ background "#1c1c1c"
 decorations none
 dockapp_mode none
 fuzzy_edges 0
-geometry 5x1-450+0
-grow_gravity NE
-icon_gravity NE
+grow_gravity N
+icon_gravity N
 icon_size 10
 log_level err
 kludges force_icons_size
-max_geometry 5x1-325-10
 no_shrink false
 parent_bg false
 scrollbars none
@@ -17,8 +15,8 @@ sticky true
 tint_color white
 tint_level 0
 transparent false
-vertical false
+vertical true
 window_layer bottom
 window_strut auto
 window_type dock
-xsync false
+xsync true

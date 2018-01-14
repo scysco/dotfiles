@@ -1,7 +1,7 @@
 #!/bin/sh
 #=#=#=
 # Take screenshot (full window) and save it to daydir(%Y-%m-%d).
-#
+# install imagemagick
 # You may change the variable below.
 #
 # ```
@@ -13,7 +13,7 @@
 
 get_dir=false
 get_name=false
-rootdir=$HOME/Pictures/Screenshots
+rootdir=$HOME/Imágenes/Screenshots
 
 while getopts d:o:h OPT
 do

@@ -28,6 +28,7 @@ import XMonad.Layout.DragPane          -- see only two window
 import XMonad.Layout.Fullscreen        -- to manualy expend app to fullscreen
 import XMonad.Layout.Gaps
 import XMonad.Layout.HintedGrid
+import XMonad.Layout.IndependentScreens
 import XMonad.Layout.LayoutScreens
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
@@ -54,7 +55,6 @@ import XMonad.Util.WorkspaceCompare
 import qualified Data.Map as M
 import qualified XMonad.Actions.FlexibleResize as Flex -- flexible resize
 import qualified XMonad.StackSet as W  -- myManageHookShift
-
 -------------------------------------------------------------------------------
 -- local variables                                                           --
 -------------------------------------------------------------------------------
@@ -88,7 +88,8 @@ main = do
     xmproc <- spawnPipe "sh ~/.fehbg"
     xmproc <- spawnPipe "urxvtd -o -q -f"
     wsbar <- spawnPipe myWsBar
-    xmproc <- spawnPipe "sleep 3 && ~/.bin/trayer.sh"
+    xmproc <- spawnPipe "sh ~/.bin/trayer.sh"
+    xmproc <- spawnPipe "sh ~/.bin/wallpaper_colors.sh"
     xmonad $ withNavigation2DConfig myNavigation2DConfig
 	   $ withUrgencyHookC NoUrgencyHook urgencyConfig{ suppressWhen = Focused }	
 	   $ ewmh 
@@ -101,7 +102,6 @@ main = do
        , normalBorderColor  = mynormalBorderColor
        , focusedBorderColor = myfocusedBorderColor
        , logHook            = myLogHook wsbar
-                                -- >> updatePointer (Relative 0.5 0.5)
        , layoutHook         = mkToggle (single NBFULL) $ avoidStruts myLayout
        , manageHook         = myManageHook <+> manageHook desktopConfig
        , handleEventHook    = myEventHook
@@ -155,7 +155,7 @@ main = do
        -- Launch file manager
        , ("M-e", spawn "termite -e ranger")
        -- Launch web browser
-       , ("M-w", spawn "luakit")
+       --, ("M-f", spawn "firefox")
        -- Launch dmenu for launching applicatiton
        , ("M-p", spawn "exe=`dmenu_run -fn 'Migu 1M:size=10'` && exec $exe")
        -- Play / Pause media keys

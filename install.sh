@@ -5,7 +5,7 @@ sudo ln -s $HOME/.dotfiles/pacman.conf /etc/pacman.conf
 sudo pacman -Syu
 sudo pacman -S yaourt
 #install enviroment
-sudo pacman -S xorg alsa-utils xorg-xinit xmonad xmonad-contrib xmobar dzen2 dmenu mesa mesa-demos libxss trayer xdg-user-dirs pulseaudio pulseaudio-alsa pavucontrol pamixer feh ranger libcaca highlight atool w3m lynx poppler transmission-cli mediainfo perl-image-exiftool firefox numlockx
+sudo pacman -S xorg alsa-utils xorg-xinit xmonad xmonad-contrib xmobar dzen2 dmenu mesa mesa-demos libxss trayer xdg-user-dirs pulseaudio pulseaudio-alsa pavucontrol pamixer feh ranger libcaca highlight atool w3m lynx poppler transmission-cli mediainfo perl-image-exiftool firefox numlockx imagemagick
 ranger --copy-config=all
 rm $HOME/.config/ranger/rc.conf
 ln -s $HOME/.dotfiles/rc.conf $HOME/.config/ranger/rc.conf

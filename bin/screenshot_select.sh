@@ -13,7 +13,7 @@
 
 get_dir=false
 get_name=false
-rootdir=$HOME/Pictures/Screenshots
+rootdir=$HOME/Imágenes/Screenshots
 
 while getopts d:o:h OPT
 do

@@ -25,14 +25,14 @@ Config { font = "xft:Migu 1M:size=10"
                                                 , "-O" , "Charging <left>%"
                                                 , "-i" , "<left>%"
                                           ] 50
-                    --, Run GMail "gmail.username" "GmailPassword" ["-t", "Mail: <count>"] 3000
-	            , Run Com "/home/scysco/.bin/Wireless.sh" [] "wifi" 10
-		    , Run Com "/home/scysco/.bin/Volumen.sh" [] "vol" 10
-		    , Run Com "/home/scysco/.bin/Brightness.sh" [] "bright" 10
-	   	    , Run Date "%a %m/%d %I:%M" "date" 10
+    	            , Run Com "/home/scysco/.bin/Wireless.sh" [] "wifi" 10
+	    	        , Run Com "/home/scysco/.bin/Volumen.sh" [] "vol" 10
+    	    	    , Run Com "/home/scysco/.bin/Brightness.sh" [] "bright" 10
+                    , Run Com "/home/scysco/.bin/trayer-xmobar.sh" [] "tray" 10
+    	   	        , Run Date "%a %m/%d %I:%M" "date" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ │ %wifi% │ <fc=#5e5e5e>%bright%</fc> │ <fc=#5e5e5e>%vol%</fc> │ %battery% │ <action=`xclock`><fc=#ece391>%date%</fc></action> "
+       , template = " %StdinReader% }{ <action=`sh ~/.bin/trayer-toggle.sh`>%tray%</action> │ %wifi% │ <fc=#5e5e5e>%bright%</fc> │ <fc=#5e5e5e>%vol%</fc> │ %battery% │ <action=`xclock`><fc=#ece391>%date%</fc></action> "
 }
