@@ -20,7 +20,6 @@ call SpaceVim#layers#load('lang#swig')
 call SpaceVim#layers#load('lang#tmux')
 call SpaceVim#layers#load('lang#vim')
 call SpaceVim#layers#load('lang#xml')
-call SpaceVim#layers#load('shell')
 call SpaceVim#layers#load('shell',
         \ {
         \ 'default_position' : 'bottom',
@@ -60,3 +59,7 @@ set timeoutlen=0
 set cursorcolumn
 "Git Gutter for git visual chhanges column
 let g:gitgutter_enabled = 1
+"Ale Syntax Chercker
+let g:spacevim_enable_neomake = 0
+let g:spacevim_enable_ale = 1
+let g:ale_sign_column_always = 1

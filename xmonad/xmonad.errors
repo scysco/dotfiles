@@ -1,30 +1,30 @@
 
-xmonad.hs:94:1: warning: [-Wtabs]
+xmonad.hs:91:1: warning: [-Wtabs]
     Tab character found here, and in six further locations.
     Please use spaces instead.
    |
-94 |            $ withUrgencyHookC NoUrgencyHook urgencyConfig{ suppressWhen = Focused }     
+91 |            $ withUrgencyHookC NoUrgencyHook urgencyConfig{ suppressWhen = Focused }     
    | ^^^^^^^^
 
-xmonad.hs:96:14: warning: [-Wdeprecations]
+xmonad.hs:93:14: warning: [-Wdeprecations]
     In the use of ‘defaultConfig’
     (imported from XMonad, but defined in XMonad.Config):
     Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
    |
-96 |            $ defaultConfig
+93 |            $ defaultConfig
    |              ^^^^^^^^^^^^^
 
-xmonad.hs:251:14: warning: [-Wdeprecations]
+xmonad.hs:248:14: warning: [-Wdeprecations]
     In the use of ‘defaultXPConfig’ (imported from XMonad.Prompt):
     Deprecated: "Use def (from Data.Default, and re-exported from XMonad.Prompt) instead."
     |
-251 | myXPConfig = defaultXPConfig
+248 | myXPConfig = defaultXPConfig
     |              ^^^^^^^^^^^^^^^
 
-xmonad.hs:276:37: warning: [-Wdeprecations]
+xmonad.hs:273:37: warning: [-Wdeprecations]
     In the use of ‘defaultConfig’
     (imported from XMonad, but defined in XMonad.Config):
     Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
     |
-276 | newMouse x = M.union (mouseBindings defaultConfig x) (M.fromList (myMouse x))
+273 | newMouse x = M.union (mouseBindings defaultConfig x) (M.fromList (myMouse x))
     |                                     ^^^^^^^^^^^^^

@@ -85,11 +85,8 @@ myfocusedBorderColor = "#ededed"
 main :: IO ()
 
 main = do
-    xmproc <- spawnPipe "sh ~/.fehbg"
-    xmproc <- spawnPipe "urxvtd -o -q -f"
+    xmproc <- spawnPipe "./.xmonad/init.sh"
     wsbar <- spawnPipe myWsBar
-    xmproc <- spawnPipe "sh ~/.bin/trayer.sh"
-    xmproc <- spawnPipe "sh ~/.bin/wallpaper_colors.sh"
     xmonad $ withNavigation2DConfig myNavigation2DConfig
 	   $ withUrgencyHookC NoUrgencyHook urgencyConfig{ suppressWhen = Focused }	
 	   $ ewmh 

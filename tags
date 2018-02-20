@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 <C-p>	init.vim	/^    nnoremap <silent> <C-p> :Denite file_rec<CR>$/;"	m
+g:ale_sign_column_always	init.vim	/^let g:ale_sign_column_always = 1$/;"	v
 g:clang2_placeholder_next	init.vim	/^let g:clang2_placeholder_next = ''$/;"	v
 g:clang2_placeholder_prev	init.vim	/^let g:clang2_placeholder_prev = ''$/;"	v
 g:ctrlp_map	init.vim	/^    let g:ctrlp_map = ''$/;"	v
@@ -12,8 +13,10 @@ g:deoplete#auto_complete_delay	init.vim	/^let g:deoplete#auto_complete_delay = 1
 g:gitgutter_enabled	init.vim	/^let g:gitgutter_enabled = 1$/;"	v
 g:neomake_vim_enabled_makers	init.vim	/^let g:neomake_vim_enabled_makers = []$/;"	v
 g:spacevim_buffer_index_type	init.vim	/^let g:spacevim_buffer_index_type = 1$/;"	v
+g:spacevim_enable_ale	init.vim	/^let g:spacevim_enable_ale = 1$/;"	v
 g:spacevim_enable_debug	init.vim	/^let g:spacevim_enable_debug = 1$/;"	v
 g:spacevim_enable_googlesuggest	init.vim	/^let g:spacevim_enable_googlesuggest = 1$/;"	v
+g:spacevim_enable_neomake	init.vim	/^let g:spacevim_enable_neomake = 0$/;"	v
 g:spacevim_enable_os_fileformat_icon	init.vim	/^let g:spacevim_enable_os_fileformat_icon = 1$/;"	v
 g:spacevim_enable_statusline_display_mode	init.vim	/^let g:spacevim_enable_statusline_display_mode = 0$/;"	v
 g:spacevim_enable_tabline_filetype_icon	init.vim	/^let g:spacevim_enable_tabline_filetype_icon = 1$/;"	v
